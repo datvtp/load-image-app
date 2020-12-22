@@ -1,16 +1,29 @@
 import React from "react";
-import HelloWorld from "./components/HelloWorld";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./views/Home";
+import About from "./views/About";
 
 function App() {
   return (
     <div>
-      <Header />
+      <Router>
+        <Header />
 
-      <HelloWorld name="Dat" />
+        <div className="p-3">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+          </Switch>
+        </div>
 
-      <Footer />
+        <Footer />
+      </Router>
     </div>
   );
 }

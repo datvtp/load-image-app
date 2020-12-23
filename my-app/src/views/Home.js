@@ -52,9 +52,9 @@ const Home = () => {
 
   if (products.data) {
     content = products.data.map((product) => (
-      <div className="mb-4 w-full border-b">
+      <div className="mb-4 w-full border-b text-center">
         <h1 className="text-2xl font-bold mb-3">{product.title}</h1>
-        <div>
+        <div className="flex justify-center">
           <Link to={`/products/${product.id}`}>
             <img style={style} src={product.image} alt={product.name} />
           </Link>
@@ -67,10 +67,6 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="flex justify-center font-bold text-2xl mb-3">
-        Best Sellers
-      </h1>
-
       <div className="">{content}</div>
     </div>
   );

@@ -52,9 +52,9 @@ const Product = () => {
 
   if (product.data) {
     content = (
-      <div>
+      <div className="text-center">
         <h1 className="text-2xl font-bold mb-3">{product.data.title}</h1>
-        <div>
+        <div className="flex justify-center">
           <img style={style} src={product.data.image} alt={product.data.name} />
         </div>
         <div className="font-bold text-xl mb-3 mt-5">{product.data.price}$</div>

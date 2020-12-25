@@ -52,7 +52,7 @@ const Home = () => {
 
   if (products.data) {
     content = products.data.map((product) => (
-      <div className="mb-4 w-full border-b text-center">
+      <div className="mb-4 w-1/6 border text-center">
         <h1 className="text-2xl font-bold mb-3">{product.title}</h1>
         <div className="flex justify-center">
           <Link to={`/products/${product.id}`}>
@@ -67,7 +67,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="">{content}</div>
+      <div className="flex flex-col justify-around items-center">{content}</div>
     </div>
   );
 };
